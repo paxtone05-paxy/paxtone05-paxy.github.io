@@ -20,6 +20,10 @@ Open `index.html` in a browser. The site uses plain HTML, CSS, and JavaScript; n
 
 The contact form opens the visitor's email application with the enquiry details addressed to `prayagvaishnav30@gmail.com`.
 
+## PvX Radio
+
+The floating radio player includes three selectable tracks with play/pause, previous/next, and seek controls. Audio is served from `assets/audio/`; only `Intro (Kohram).mp3` is extracted from the supplied Kohram archive.
+
 ## Publishing
 
 This repository is named `paxtone05-paxy.github.io`, so GitHub Pages can serve the root-level `index.html` at the live site URL. In the repository's **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/(root)`, and save if Pages is not already configured.
