@@ -163,6 +163,16 @@ h1, h2, h3, p { margin-top: 0; }
 .orb-c { top: 35%; left: 35%; width: 153px; height: 153px; background: radial-gradient(circle at 35% 33%, rgba(117,238,211,.43), rgba(16,89,90,.12) 50%, transparent 73%); }
 .nexus-word { position: absolute; top: 45%; left: 50%; color: #dbfff1; font-size: clamp(38px, 6vw, 63px); font-weight: 700; letter-spacing: .05em; text-shadow: 0 0 35px rgba(92,239,204,.3); transform: translate(-50%, -50%); }
 .nexus-word span { color: #82d5bd; font: 9px var(--mono); vertical-align: top; }
+.visual-electronic { background: radial-gradient(ellipse at 50% 50%, #253b42 0, #141e24 43%, #0b1117 100%); }
+.electronic-orbit { position: absolute; top: 16%; left: 50%; width: 210px; height: 210px; border: 1px solid rgba(188,246,232,.42); border-radius: 50%; box-shadow: 0 0 70px rgba(77,224,206,.12), inset 0 0 44px rgba(77,224,206,.08); transform: translateX(-50%); }
+.electronic-device { position: absolute; top: 28%; left: 50%; width: 116px; height: 102px; border: 10px solid #b8d7d1; border-bottom-color: #83aaa6; border-radius: 54px 54px 32px 32px; box-shadow: 0 0 35px rgba(117,235,219,.2); transform: translateX(-50%); }
+.electronic-device::before, .electronic-device::after { position: absolute; bottom: -30px; width: 20px; height: 39px; border: 1px solid rgba(190,237,226,.7); border-radius: 9px; content: ""; background: linear-gradient(135deg, #456b6b, #132328); }
+.electronic-device::before { left: -15px; }
+.electronic-device::after { right: -15px; }
+.electronic-word { position: absolute; top: 67%; left: 50%; display: flex; align-items: center; flex-direction: column; color: #eafff8; font-size: clamp(33px, 5vw, 49px); font-weight: 800; line-height: 1; letter-spacing: -.07em; text-shadow: 0 0 25px rgba(112,229,205,.26); transform: translateX(-50%); }
+.electronic-word span { margin-top: 8px; color: #a2c4bd; font: 9px var(--mono); letter-spacing: .28em; }
+.electronic-status { position: absolute; top: 22px; right: 22px; padding: 8px 10px; border: 1px solid rgba(133,235,210,.42); color: #b6f2df; background: rgba(7,25,27,.55); font-size: 8px; letter-spacing: .08em; }
+.visual-electronic .visual-corner { color: #a8c5bf; }
 .project-meta { display: flex; align-items: start; justify-content: space-between; gap: 15px; padding-top: 16px; }
 .project-meta h3 { margin-bottom: 6px; font-size: 14px; font-weight: 600; }
 .project-meta p { margin-bottom: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
@@ -281,6 +291,10 @@ h1, h2, h3, p { margin-top: 0; }
   .nexus-orb { width: 43vw; height: 43vw; }
   .orb-c { width: 37vw; height: 37vw; }
   .nexus-word { font-size: clamp(45px, 11vw, 60px); }
+  .electronic-orbit { width: 57vw; height: 57vw; }
+  .electronic-device { width: 104px; height: 92px; }
+  .electronic-word { font-size: clamp(34px, 9vw, 48px); }
+  .electronic-status { top: 16px; right: 16px; font-size: 7px; }
   .skills-grid { gap: 20px; }
   .skill-cloud { gap: 9px; }
   .skill-chip { min-height: 38px; padding-inline: 12px; font-size: 9px; }
