@@ -23,12 +23,6 @@ const radioNote = document.querySelector("#radio-note");
 
 const radioTracks = [
   {
-    title: "Kohram",
-    artist: "Dhanda Nyoliwala",
-    src: "assets/audio/kohram.mp3",
-    art: "K",
-  },
-  {
     title: "Feel It",
     artist: "Michele Morrone",
     src: "assets/audio/feel-it.mp3",

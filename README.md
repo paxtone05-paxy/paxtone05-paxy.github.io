@@ -22,7 +22,7 @@ The contact form opens the visitor's email application with the enquiry details 
 
 ## PvX Radio
 
-The floating radio player includes three selectable tracks with play/pause, previous/next, and seek controls. Audio is served from `assets/audio/`; only `Intro (Kohram).mp3` is extracted from the supplied Kohram archive.
+The floating radio player includes two selectable tracks, Feel It and Stay, with play/pause, previous/next, and seek controls. Audio is served from `assets/audio/`.
 
 ## Publishing
 
