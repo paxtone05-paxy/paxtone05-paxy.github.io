@@ -6,6 +6,12 @@ A responsive portfolio website for Prayag Vaishnav, featuring selected work, ser
 
 https://paxtone05-paxy.github.io/
 
+## Featured project in development
+
+PVX Electronic is an interactive product website concept for an audio brand. Its live preview is linked from the Projects section:
+
+https://paxtone05-paxy.github.io/PvX-Portfolio/
+
 ## Run locally
 
 Open `index.html` in a browser. The site uses plain HTML, CSS, and JavaScript; no build step or package installation is required.
