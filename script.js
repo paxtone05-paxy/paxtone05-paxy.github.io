@@ -140,9 +140,6 @@ const updateUniverseParallax = () => {
     const heroTop = document.querySelector("#universe").getBoundingClientRect().top;
     const offset = Math.max(-55, Math.min(55, -heroTop * 0.12));
     heroArt.style.setProperty("--universe-scroll", `${offset}px`);
-    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollProgress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
-    document.documentElement.style.setProperty("--scroll-progress", `${scrollProgress}%`);
     scrollFrame = 0;
   });
 };
@@ -180,43 +177,6 @@ projectFilterButtons.forEach((button) => {
 document.querySelectorAll(".service-item[data-project-category], .work-planet[data-project-category]").forEach((link) => {
   link.addEventListener("click", () => setProjectFilter(link.dataset.projectCategory));
 });
-
-if ("IntersectionObserver" in window) {
-  const revealTargets = document.querySelectorAll([
-    "#about .section-heading",
-    "#about .about-grid",
-    "#about .stats-row",
-    "#services .section-heading",
-    "#services .service-item",
-    "#projects .section-heading",
-    "#projects .library-filters",
-    "#projects .library-status",
-    "#projects .project-card",
-    "#skills .skills-grid > *",
-    "#contact > .container > .eyebrow",
-    "#contact .contact-copy",
-    "#contact .contact-form",
-    ".site-footer .footer-top",
-    ".site-footer .footer-bottom",
-  ].join(", "));
-  const staggeredTargets = document.querySelectorAll(".service-item, .project-card");
-
-  staggeredTargets.forEach((target, index) => {
-    target.style.setProperty("--reveal-delay", `${(index % 4) * 90}ms`);
-  });
-  revealTargets.forEach((target) => target.classList.add("scroll-reveal"));
-  document.documentElement.classList.add("has-scroll-reveals");
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-
-  revealTargets.forEach((target) => revealObserver.observe(target));
-}
 
 window.addEventListener("scroll", updateUniverseParallax, { passive: true });
 window.addEventListener("resize", () => {
