@@ -1,6 +1,6 @@
 # Prayag Vaishnav — Portfolio
 
-A responsive portfolio website for Prayag Vaishnav, featuring selected work, services, skills, and direct contact links.
+A responsive, dark editorial portfolio for Prayag Vaishnav, featuring the PvX orbital universe, scroll-revealed sections, a skill-filtered work library for web experience, editing, graphic design, and creative studio projects, plus services, skills, and direct contact links.
 
 ## Live site
 

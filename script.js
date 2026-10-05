@@ -137,12 +137,86 @@ let scrollFrame = 0;
 const updateUniverseParallax = () => {
   if (scrollFrame) return;
   scrollFrame = window.requestAnimationFrame(() => {
-    const heroTop = document.querySelector("#home").getBoundingClientRect().top;
+    const heroTop = document.querySelector("#universe").getBoundingClientRect().top;
     const offset = Math.max(-55, Math.min(55, -heroTop * 0.12));
     heroArt.style.setProperty("--universe-scroll", `${offset}px`);
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+    document.documentElement.style.setProperty("--scroll-progress", `${scrollProgress}%`);
     scrollFrame = 0;
   });
 };
+
+const projectFilterButtons = [...document.querySelectorAll(".library-filter")];
+const projectCards = [...document.querySelectorAll(".project-card[data-project-category]")];
+const projectLibraryStatus = document.querySelector("#library-status");
+
+const setProjectFilter = (category) => {
+  const selectedButton = projectFilterButtons.find((button) => button.dataset.projectFilter === category);
+  if (!selectedButton) return;
+
+  let visibleCount = 0;
+  projectCards.forEach((card) => {
+    const isVisible = category === "all" || card.dataset.projectCategory === category;
+    card.hidden = !isVisible;
+    if (isVisible) visibleCount += 1;
+  });
+
+  projectFilterButtons.forEach((button) => {
+    const isActive = button === selectedButton;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  projectLibraryStatus.textContent = category === "all"
+    ? `Showing all ${visibleCount} projects.`
+    : `Showing ${visibleCount} ${selectedButton.textContent.trim()} ${visibleCount === 1 ? "project" : "projects"}.`;
+};
+
+projectFilterButtons.forEach((button) => {
+  button.addEventListener("click", () => setProjectFilter(button.dataset.projectFilter));
+});
+
+document.querySelectorAll(".service-item[data-project-category], .work-planet[data-project-category]").forEach((link) => {
+  link.addEventListener("click", () => setProjectFilter(link.dataset.projectCategory));
+});
+
+if ("IntersectionObserver" in window) {
+  const revealTargets = document.querySelectorAll([
+    "#about .section-heading",
+    "#about .about-grid",
+    "#about .stats-row",
+    "#services .section-heading",
+    "#services .service-item",
+    "#projects .section-heading",
+    "#projects .library-filters",
+    "#projects .library-status",
+    "#projects .project-card",
+    "#skills .skills-grid > *",
+    "#contact > .container > .eyebrow",
+    "#contact .contact-copy",
+    "#contact .contact-form",
+    ".site-footer .footer-top",
+    ".site-footer .footer-bottom",
+  ].join(", "));
+  const staggeredTargets = document.querySelectorAll(".service-item, .project-card");
+
+  staggeredTargets.forEach((target, index) => {
+    target.style.setProperty("--reveal-delay", `${(index % 4) * 90}ms`);
+  });
+  revealTargets.forEach((target) => target.classList.add("scroll-reveal"));
+  document.documentElement.classList.add("has-scroll-reveals");
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
 
 window.addEventListener("scroll", updateUniverseParallax, { passive: true });
 window.addEventListener("resize", () => {

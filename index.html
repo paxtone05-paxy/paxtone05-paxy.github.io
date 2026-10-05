@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="styles.css?v=radio-player-20261005">
-    <script src="script.js?v=radio-player-20261005-v2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=portfolio-scroll-20261006">
+    <script src="script.js?v=portfolio-scroll-20261006" defer></script>
   </head>
   <body>
     <div class="intro-screen" id="intro-screen" role="status" aria-live="polite" aria-label="Introducing Prayag Vaishnav">
@@ -58,46 +58,46 @@
       </header>
 
       <main>
-        <section class="hero section-pad" id="home">
-          <div class="hero-grid container">
-            <div class="hero-copy">
-              <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR SELECT PROJECTS</p>
-              <h1>HEY, I'M<br><span class="gradient-text">PvX-PRAYAG</span> <span class="wink">;)</span></h1>
-              <p class="hero-role">Creative Developer <span>/</span> AI &amp; ML Enthusiast <span>/</span> Digital Creator</p>
-              <p class="hero-description">
-                I transform creative ideas into immersive digital experiences through coding, AI,
-                video editing, and graphic design.
-              </p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="#projects">Explore My Work <span aria-hidden="true">↗</span></a>
-                <a class="button button-quiet" href="#contact">Let’s Work Together <span aria-hidden="true">→</span></a>
+        <section class="portfolio-hero" id="home" aria-labelledby="portfolio-hero-title">
+          <div class="portfolio-hero-inner container">
+            <p class="portfolio-hero-kicker mono"><span aria-hidden="true"></span> INDEPENDENT CREATIVE &nbsp;·&nbsp; AVAILABLE FOR PROJECTS</p>
+            <h1 class="portfolio-hero-title" id="portfolio-hero-title"><span>HEY, I'M</span><span class="portfolio-hero-name">PvX-PRAYAG</span></h1>
+            <div class="portfolio-hero-stage">
+              <p class="portfolio-hero-copy">I build digital experiences, visuals, and stories with a little more personality. Explore my creative universe and find the right orbit for your idea.</p>
+              <div class="hero-art" id="universe" role="group" aria-label="PvX creative universe. Select a planet to explore a project.">
+                <span class="universe-hint mono">SELECT A PLANET TO EXPLORE</span>
+                <div class="universe-orbit orbit-one">
+                  <a class="work-planet planet-neural" href="#project-graphic-design" data-project-category="graphic-design" aria-label="Explore graphic design projects">
+                    <span class="planet-content"><span class="planet-sphere" aria-hidden="true"></span><span>GRAPHIC<br>DESIGN</span></span>
+                  </a>
+                </div>
+                <div class="universe-orbit orbit-two">
+                  <a class="work-planet planet-motion" href="#project-editing" data-project-category="editing" aria-label="Explore editing projects">
+                    <span class="planet-content"><span class="planet-sphere" aria-hidden="true"></span><span>EDITING</span></span>
+                  </a>
+                </div>
+                <div class="universe-orbit orbit-three">
+                  <a class="work-planet planet-studio" href="#project-creative-studio" data-project-category="creative-studio" aria-label="Explore Creative Studio, a visual identity concept">
+                    <span class="planet-content"><span class="planet-sphere" aria-hidden="true"></span><span>CREATIVE<br>STUDIO</span></span>
+                  </a>
+                </div>
+                <div class="universe-orbit orbit-four">
+                  <a class="work-planet planet-web" href="#project-web-experience" data-project-category="web-experience" aria-label="Explore web experience projects">
+                    <span class="planet-content"><span class="planet-sphere" aria-hidden="true"></span><span>WEB<br>EXPERIENCE</span></span>
+                  </a>
+                </div>
+                <span class="universe-star star-one" aria-hidden="true"></span>
+                <span class="universe-star star-two" aria-hidden="true"></span>
+                <span class="universe-star star-three" aria-hidden="true"></span>
+                <span class="universe-star star-four" aria-hidden="true"></span>
+                <div class="universe-core" aria-label="PvX">
+                  <span>Pv</span><span class="core-x">X</span>
+                </div>
               </div>
-              <div class="hero-footnote"><span class="mono">01 / 05</span><span class="footnote-line"></span><span>INDEPENDENT CREATIVE</span></div>
+              <a class="portfolio-hero-contact" href="#contact">CONTACT ME <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="hero-art" role="group" aria-label="PvX creative universe. Select a planet to explore a project.">
-              <span class="universe-hint mono">SELECT A PLANET TO EXPLORE</span>
-              <div class="universe-orbit orbit-one" aria-hidden="true"></div>
-              <div class="universe-orbit orbit-two" aria-hidden="true"></div>
-              <div class="universe-orbit orbit-three" aria-hidden="true"></div>
-              <span class="universe-star star-one" aria-hidden="true"></span>
-              <span class="universe-star star-two" aria-hidden="true"></span>
-              <span class="universe-star star-three" aria-hidden="true"></span>
-              <span class="universe-star star-four" aria-hidden="true"></span>
-              <div class="universe-core" aria-label="PvX">
-                <span>Pv</span><span class="core-x">X</span>
-              </div>
-              <a class="work-planet planet-neural" href="#project-neural" aria-label="Explore Neural Canvas, an AI creative technology concept">
-                <span class="planet-sphere" aria-hidden="true"></span><span>NEURAL<br>CANVAS</span>
-              </a>
-              <a class="work-planet planet-motion" href="#project-motion" aria-label="Explore Motion 01, a video and motion study">
-                <span class="planet-sphere" aria-hidden="true"></span><span>MOTION<br>01</span>
-              </a>
-              <a class="work-planet planet-nexus" href="#project-nexus" aria-label="Explore Nexus Studio, a digital identity study">
-                <span class="planet-sphere" aria-hidden="true"></span><span>NEXUS<br>STUDIO</span>
-              </a>
-            </div>
+            <div class="portfolio-hero-footer mono"><span>DESIGN · DEVELOPMENT · EDITING</span><a href="#about">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
           </div>
-          <div class="scroll-cue container"><span></span> SCROLL TO EXPLORE</div>
         </section>
 
         <section class="ticker" aria-label="Areas of expertise">
@@ -137,10 +137,10 @@
               <p class="heading-note">A multidisciplinary toolkit for taking ideas from the first sketch to the final frame.</p>
             </div>
             <div class="service-list">
-              <article class="service-item"><span class="service-number mono">01</span><div><h3>Creative Development</h3><p>Web experiences and interactive ideas with a little more personality.</p></div><span class="service-icon" aria-hidden="true">↗</span></article>
-              <article class="service-item"><span class="service-number mono">02</span><div><h3>AI &amp; Machine Learning</h3><p>Curious experiments exploring practical, human-centered uses of AI.</p></div><span class="service-icon" aria-hidden="true">✳</span></article>
-              <article class="service-item"><span class="service-number mono">03</span><div><h3>Video Editing</h3><p>Sharp cuts, considered pacing, and stories that make you feel something.</p></div><span class="service-icon" aria-hidden="true">▶</span></article>
-              <article class="service-item"><span class="service-number mono">04</span><div><h3>Graphic Design</h3><p>Distinctive visual identities and digital graphics built to stand out.</p></div><span class="service-icon" aria-hidden="true">◈</span></article>
+              <a class="service-item" href="#project-web-experience" data-project-category="web-experience"><span class="service-number mono">01</span><div><h3>Web Experience</h3><p>Websites and interactive ideas with a little more personality.</p></div><span class="service-icon" aria-hidden="true">↗</span></a>
+              <a class="service-item" href="#project-graphic-design" data-project-category="graphic-design"><span class="service-number mono">02</span><div><h3>Graphic Design</h3><p>Distinctive visual identities and digital graphics built to stand out.</p></div><span class="service-icon" aria-hidden="true">◈</span></a>
+              <a class="service-item" href="#project-editing" data-project-category="editing"><span class="service-number mono">03</span><div><h3>Editing</h3><p>Sharp cuts, considered pacing, and stories that make you feel something.</p></div><span class="service-icon" aria-hidden="true">▶</span></a>
+              <a class="service-item" href="#project-creative-studio" data-project-category="creative-studio"><span class="service-number mono">04</span><div><h3>Creative Studio</h3><p>Brand identity and digital design for a distinctive creative world.</p></div><span class="service-icon" aria-hidden="true">✳</span></a>
             </div>
           </div>
         </section>
@@ -148,37 +148,45 @@
         <section class="section-pad projects-section" id="projects">
           <div class="container">
             <div class="section-heading heading-row">
-              <div><p class="eyebrow"><span class="section-index">03</span> SELECTED EXPLORATIONS</p><h2>Made with a little<br><span class="gradient-text">extra curiosity.</span></h2></div>
+              <div><p class="eyebrow"><span class="section-index">03</span> WORK LIBRARY</p><h2>Browse by<br><span class="gradient-text">what you need.</span></h2></div>
               <a class="text-link heading-link" href="#contact">Have a project in mind? <span>↗</span></a>
             </div>
+            <div class="library-filters" role="group" aria-label="Filter work by skill">
+              <button class="library-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All work</button>
+              <button class="library-filter" type="button" data-project-filter="web-experience" aria-pressed="false">Web Experience</button>
+              <button class="library-filter" type="button" data-project-filter="editing" aria-pressed="false">Editing</button>
+              <button class="library-filter" type="button" data-project-filter="graphic-design" aria-pressed="false">Graphic Design</button>
+              <button class="library-filter" type="button" data-project-filter="creative-studio" aria-pressed="false">Creative Studio</button>
+            </div>
+            <p class="library-status mono" id="library-status" aria-live="polite">Showing all 4 projects.</p>
             <div class="project-grid">
-              <article class="project-card project-wide" id="project-neural">
-                <a class="project-visual visual-neural" href="#contact" aria-label="Discuss a creative AI experience project">
+              <article class="project-card project-wide" id="project-graphic-design" data-project-category="graphic-design">
+                <a class="project-visual visual-neural" href="#contact" aria-label="Discuss a graphic design project">
                   <span class="visual-label mono">AI / CREATIVE TECHNOLOGY</span>
                   <span class="neural-sun"></span><span class="neural-line line-a"></span><span class="neural-line line-b"></span><span class="neural-line line-c"></span>
-                  <span class="visual-title">NEURAL<br>CANVAS<span>™</span></span>
+                  <span class="visual-title">GRAPHIC<br>DESIGN</span>
                   <span class="visual-corner">EXPERIMENT 001 &nbsp; ↗</span>
                 </a>
-                <div class="project-meta"><div><h3>Neural Canvas</h3><p>An exploration in AI-assisted visual expression.</p></div><span class="project-type mono">CONCEPT / AI</span></div>
+                <div class="project-meta"><div><h3>Graphic Design</h3><p>An exploration in AI-assisted visual expression and graphic design.</p></div><span class="project-type mono">GRAPHIC DESIGN</span></div>
               </article>
-              <article class="project-card" id="project-motion">
-                <a class="project-visual visual-motion" href="#contact" aria-label="Discuss a motion and video project">
+              <article class="project-card" id="project-editing" data-project-category="editing">
+                <a class="project-visual visual-motion" href="#contact" aria-label="Discuss a video editing project">
                   <span class="visual-label mono">VIDEO / MOTION</span>
-                  <span class="motion-disc"></span><span class="motion-orbit"></span><span class="motion-type">MOVE<br>WITH<br>INTENT<span>.</span></span>
+                  <span class="motion-disc"></span><span class="motion-orbit"></span><span class="motion-type">EDITING<span>.</span></span>
                   <span class="visual-corner">FRAME 024 &nbsp; ↗</span>
                 </a>
-                <div class="project-meta"><div><h3>Motion / 01</h3><p>A study in rhythm, movement, and visual storytelling.</p></div><span class="project-type mono">MOTION</span></div>
+                <div class="project-meta"><div><h3>Editing</h3><p>A study in rhythm, movement, and visual storytelling.</p></div><span class="project-type mono">VIDEO / MOTION</span></div>
               </article>
-              <article class="project-card" id="project-nexus">
+              <article class="project-card" id="project-creative-studio" data-project-category="creative-studio">
                 <a class="project-visual visual-nexus" href="#contact" aria-label="Discuss a digital design project">
-                  <span class="visual-label mono">DIGITAL / DESIGN</span>
+                  <span class="visual-label mono">CREATIVE / IDENTITY</span>
                   <span class="nexus-orb orb-a"></span><span class="nexus-orb orb-b"></span><span class="nexus-orb orb-c"></span>
-                  <span class="nexus-word">NEXUS<span>®</span></span>
+                  <span class="nexus-word">CREATIVE<span>STUDIO</span></span>
                   <span class="visual-corner">IDENTITY STUDY &nbsp; ↗</span>
                 </a>
-                <div class="project-meta"><div><h3>Nexus Studio</h3><p>A bold visual identity concept for a digital-first world.</p></div><span class="project-type mono">BRANDING</span></div>
+                <div class="project-meta"><div><h3>Creative Studio</h3><p>A bold visual identity concept for a digital-first world.</p></div><span class="project-type mono">BRANDING</span></div>
               </article>
-              <article class="project-card" id="project-electronic">
+              <article class="project-card" id="project-web-experience" data-project-category="web-experience">
                 <a
                   class="project-visual visual-electronic"
                   href="https://paxtone05-paxy.github.io/PvX-Portfolio/"
@@ -207,11 +215,12 @@
               <p class="skills-intro">Tools are just the start. The fun part is figuring out how to put them together.</p>
             </div>
             <div class="skill-cloud" aria-label="Skills and tools">
-              <span class="skill-chip chip-featured">Creative development <i>✳</i></span>
+              <span class="skill-chip chip-featured">Web experience <i>✳</i></span>
               <span class="skill-chip">Artificial intelligence</span>
               <span class="skill-chip">Machine learning</span>
-              <span class="skill-chip">Video editing</span>
+              <span class="skill-chip">Editing</span>
               <span class="skill-chip">Graphic design</span>
+              <span class="skill-chip">Creative studio</span>
               <span class="skill-chip">Visual storytelling</span>
               <span class="skill-chip">Digital experiences</span>
               <span class="skill-chip">Creative problem-solving</span>
